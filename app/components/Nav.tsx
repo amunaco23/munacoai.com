@@ -15,7 +15,7 @@ export default function Nav() {
           MunacoAI
         </span>
         <a
-          href="#"
+          href="https://calendly.com/amunaco/30min"
           className="px-5 py-2 rounded-xl text-sm font-medium text-white transition-all duration-200"
           style={{
             background: "linear-gradient(135deg, #ff8a00, #d72600)",

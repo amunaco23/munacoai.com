@@ -59,7 +59,7 @@ export default function FinalCTA() {
           className="mt-10"
         >
           <a
-            href="#"
+            href="https://calendly.com/amunaco/30min"
             className="inline-block px-10 py-5 rounded-2xl text-white font-semibold text-xl transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-[0.98]"
             style={{
               background: "linear-gradient(135deg, #ff8a00, #ff5e00, #d72600)",

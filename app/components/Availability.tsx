@@ -224,7 +224,7 @@ export default function Availability() {
           className="mt-10 text-center"
         >
           <a
-            href="#"
+            href="https://calendly.com/amunaco/30min"
             className="inline-block px-8 py-4 rounded-2xl text-white font-semibold transition-all duration-300 hover:scale-[1.03] hover:brightness-110"
             style={{
               background: "linear-gradient(135deg, #ff8a00, #ff5e00, #d72600)",
