@@ -1,34 +1,31 @@
 "use client";
 
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+import { highwayPreset } from "./HyperspeedPresets";
+
+const Hyperspeed = dynamic(() => import("./Hyperspeed"), { ssr: false });
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-[#060606]" />
+      {/* Hyperspeed highway background */}
+      <div className="absolute inset-0 z-0">
+        <Hyperspeed effectOptions={highwayPreset} />
+      </div>
 
-      {/* Animated gradient orb */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.6 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        className="absolute inset-0 flex items-center justify-center pointer-events-none"
-      >
-        <div
-          className="w-[700px] h-[700px] rounded-full blur-[120px] opacity-30"
-          style={{
-            background:
-              "radial-gradient(circle, #ff8a00 0%, #ff5e00 40%, #d72600 70%, transparent 100%)",
-            animation: "gradientShift 8s ease infinite",
-            backgroundSize: "200% 200%",
-          }}
-        />
-      </motion.div>
+      {/* Dark overlay so text stays readable */}
+      <div
+        className="absolute inset-0 z-10 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(6,6,6,0.55) 0%, rgba(6,6,6,0.35) 50%, rgba(6,6,6,0.85) 90%, #060606 100%)",
+        }}
+      />
 
       {/* Noise texture overlay */}
       <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        className="absolute inset-0 z-10 opacity-[0.025] pointer-events-none"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E")`,
           backgroundRepeat: "repeat",
@@ -37,7 +34,7 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-20 text-center px-6 max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -80,12 +77,11 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9, ease: "easeOut" }}
           className="mt-6"
-          style={{ color: "#8a8a8a" }}
         >
           <span className="text-2xl font-semibold" style={{ color: "#ff8a00" }}>
             $199
           </span>
-          <span className="text-lg ml-1">/hour</span>
+          <span className="text-lg ml-1" style={{ color: "#8a8a8a" }}>/hour</span>
         </motion.div>
 
         <motion.div
@@ -96,6 +92,8 @@ export default function Hero() {
         >
           <a
             href="https://calendly.com/amunaco/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-8 py-4 rounded-2xl text-white font-semibold text-lg transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-[0.98]"
             style={{
               background: "linear-gradient(135deg, #ff8a00, #ff5e00, #d72600)",
@@ -117,9 +115,9 @@ export default function Hero() {
         </motion.p>
       </div>
 
-      {/* Bottom fade */}
+      {/* Bottom fade into next section */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
+        className="absolute bottom-0 left-0 right-0 h-32 z-20 pointer-events-none"
         style={{
           background: "linear-gradient(to bottom, transparent, #060606)",
         }}

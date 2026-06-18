@@ -25,7 +25,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-28 px-6 relative">
+    <section id="how-it-works" className="py-28 px-6 relative">
       {/* Subtle divider glow */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 pointer-events-none"

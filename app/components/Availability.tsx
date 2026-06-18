@@ -51,7 +51,7 @@ export default function Availability() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-28 px-6 relative">
+    <section id="availability" className="py-28 px-6 relative">
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 pointer-events-none"
         style={{
