@@ -44,32 +44,19 @@ export default function Hero() {
             className="font-bold leading-[1.05] tracking-tight text-white"
             style={{ fontSize: "clamp(52px, 8vw, 96px)" }}
           >
-            AI isn&apos;t your problem.
+            Hire an AI operator.
           </h1>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-        >
-          <h2
-            className="font-bold leading-tight tracking-tight gradient-text mt-2"
-            style={{ fontSize: "clamp(52px, 8vw, 96px)" }}
-          >
-            Your bottlenecks are.
-          </h2>
         </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.75, ease: "easeOut" }}
+          transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
           className="mt-8 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
           style={{ color: "#d1d1d1" }}
         >
-          I help businesses identify where AI can actually create value,
-          prioritize opportunities, and implement practical solutions.
+          I&apos;ll find where AI fits in your business and build the solutions
+          that save you time and money.
         </motion.p>
 
         <motion.div
