@@ -1,5 +1,19 @@
 # MunacoAI — Releases
 
+## November 13, 2026 — V2: Minimal Redesign
+**Shipped:** 10:15 AM CT
+
+### What shipped
+- Redesigned to match anthonymunaco.com: white/neutral palette, Inter, max-w-2xl single column, automatic dark mode
+- Cut to one short page: headline, What I Do (Identify / Prioritize / Build), $199/hour engagement + Book a discovery call, footer
+- Removed the Hyperspeed background, glass cards, How It Works, and Availability sections
+- AM circle logo top-left (same as anthonymunaco.com, links there); footer links there too
+
+### Stack
+- Removed dependencies: framer-motion, three, postprocessing, @types/three
+- Added app/components/AnimateIn.tsx (shared scroll fade-in from anthonymunaco.com)
+- Deleted Nav, Hero, WhatIDo, HowItWorks, Availability, FinalCTA, Hyperspeed components
+
 ## June 18, 2026 — V1: Initial Landing Page
 **Shipped:** 1:00 PM CT
 
