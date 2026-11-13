@@ -1,5 +1,14 @@
 # MunacoAI — Releases
 
+## November 13, 2026 — AM Favicon
+**Shipped:** 10:25 AM CT
+
+### What shipped
+- Browser tab and home-screen icon is now the AM circle logo (same as anthonymunaco.com)
+
+### Stack
+- Added app/icon.png and app/apple-icon.png; removed the default app/favicon.ico
+
 ## November 13, 2026 — V2: Minimal Redesign
 **Shipped:** 10:15 AM CT
 
